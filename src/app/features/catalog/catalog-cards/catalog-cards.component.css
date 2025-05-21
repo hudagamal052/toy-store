@@ -1,0 +1,26 @@
+.breadcrumb {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+button.btn {
+  background-color: transparent;
+  border: none;
+}
+
+button.btn:hover {
+  background-color: #9ebc1f;
+  color: white;
+}
+
+.btn-custom-danger {
+  background-color: #ee0303 !important;
+}
+
+.btn-custom-warning {
+  background-color: #ffc107 !important;
+}
+
+.btn-custom-success {
+  background-color: #28a745 !important;
+}

@@ -1,0 +1,85 @@
+.bg_above_bar {
+  background-color: #a5c926 !important;
+}
+.instagram-section {
+  background-color: #fff;
+}
+
+.instagram-title {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.instagram-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.instagram-item img {
+  transition: transform 0.4s ease;
+}
+
+.instagram-item:hover img {
+  transform: scale(1.05);
+}
+
+.instagram-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.instagram-item:hover .instagram-overlay {
+  opacity: 1;
+}
+
+.btn-outline-secondary {
+  border-color: #9ebc1f;
+  color: #9ebc1f;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #9ebc1f;
+  color: white;
+}
+.product-section {
+  margin-bottom: 2rem;
+}
+
+.product-image-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  color: #9ebc1f;
+  font-weight: 600;
+  font-size: 1.1rem;
+}

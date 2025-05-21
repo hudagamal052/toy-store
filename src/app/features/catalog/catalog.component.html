@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="mt-5 pt-5">
+  <nav aria-label=" breadcrumb" class="m-5 p-2 border rounded-pill">
+    <ol class="breadcrumb bg-transparent m-0">
+      <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Catalog</li>
+    </ol>
+  </nav>
+  <app-search-bar (searchChanged)="getQuery($event)" />
+
+  <div class="d-flex justify-content-between align-items-center mb-3 mx-5">
+    <h4 class="">{{selectedCategory}}</h4>
+    <div class="d-flex gap-3">
+      <button class="btn rounded-pill" [ngClass]="{ 'active-btn': selectedCategory === 'All Toys' }"
+        (click)="show('All Toys')">
+        All Toys
+      </button>
+
+      <button class="btn rounded-pill" [ngClass]="{ 'active-btn': selectedCategory === type }"
+        *ngFor="let type of toyTypes" (click)="show(type)">
+        {{type}}
+      </button>
+      <!-- <button class="btn rounded-pill" *ngFor="let type of toyTypes";
+(click)="show(type)">
+        {{type}}
+      </button> -->
+    </div>
+
+  </div>
+  <div style="height: 2px; background-color: #dfe2e4; position: relative;" class="mx-5">
+    <div style="height: 2px; width: 120px; background-color: #a7cf3d; position: absolute; bottom: 0; left: 0;"></div>
+  </div>
+
+  <div class="p-5">
+    <div class="row">
+      @for (product of allProducts; track product.id){
+      <div class="col-sm-6 col-md-4 col-lg-3 my-4">
+        <app-catalog-cards [productData]="product" />
+      </div>
+      }
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
